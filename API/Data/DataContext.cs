@@ -14,5 +14,13 @@ namespace API.Data
         }
 
         public DbSet<AppUser> Users { get; set; }
+        public DbSet<AppAccount> Accounts { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<AppAccount>()
+                .HasOne<AppUser>()
+                .WithMany();
+        }
     }
 }
