@@ -2,7 +2,6 @@
 **/obj
 *.dll
 **/Data/Migrations/*
-*.db
 *.db-shm
 *.db-wal
 .DS_Store
